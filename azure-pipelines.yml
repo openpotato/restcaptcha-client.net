@@ -152,7 +152,7 @@ stages:
             git config user.email 'azuredevops@stueber.nomail'
 
             # Add 'github' remote
-            git remote add github "https://$($env:PAT)@github.com/enbrea/restcaptcha-client.net.git"
+            git remote add github "https://$($env:PAT)@github.com/openpotato/restcaptcha-client.net.git"
 
             # Fetch remote main if it exists (ok to fail if repo is empty)
             git fetch --prune github main
