@@ -5,7 +5,7 @@
 
 The official [.NET](https://dotnet.microsoft.com/) client library for direct access to the [RESTCaptcha API](https://github.com/openpotato/restcaptcha).
 
-+ Supports .NET 8 and .NET 9
++ Supports .NET 10, .NET 9 and .NET 8
 + Supports the `verify` API endpoint for server-side verification.
 + Supports [RFC 9457](https://datatracker.ietf.org/doc/html/rfc9457) error responses
  
