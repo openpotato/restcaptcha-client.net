@@ -95,13 +95,13 @@ stages:
       displayName: 'Build'
       inputs:
         command: 'build'
-        projects: '*.sln'
+        projects: '*.slnx'
         arguments: '-c $(BuildConfiguration) --no-restore /p:ContinuousIntegrationBuild=true'
     - task: DotNetCoreCLI@2
       displayName: 'Test'
       inputs:
         command: 'test'
-        projects: '*.sln'
+        projects: '*.slnx'
         arguments: '-c $(BuildConfiguration) --no-build'
         testRunTitle: 'Perform unit tests'
     - task: DotNetCoreCLI@2

@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="src/RestCaptcha.Client.csproj" />
+  <Project Path="test/Xunit/RestCaptcha.Client.XUnit.csproj" />
+</Solution>
