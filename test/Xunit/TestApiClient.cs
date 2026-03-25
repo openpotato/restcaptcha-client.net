@@ -30,7 +30,7 @@ namespace RestCaptcha.Client.Tests
 
             await Assert.ThrowsAsync<HttpRequestException>(async () =>
             {
-                await apiClient.VerifySolutionAsync("token", "solution", "127.0.0.1");
+                await apiClient.VerifySolutionAsync("token", "solution", "127.0.0.1", TestContext.Current.CancellationToken);
             });
         }
 
@@ -49,7 +49,7 @@ namespace RestCaptcha.Client.Tests
 
             await Assert.ThrowsAsync<ProblemDetailsException>(async () =>
             {
-                await apiClient.VerifySolutionAsync("bad-token", "solution", "127.0.0.1");
+                await apiClient.VerifySolutionAsync("bad-token", "solution", "127.0.0.1", TestContext.Current.CancellationToken);
             });
         }
 
@@ -65,7 +65,7 @@ namespace RestCaptcha.Client.Tests
 
             var apiClient = new ApiClient(httpClient, new Uri("https://localhost:44303/v1/"), "test-key", "test-secret", "en");
 
-            var status = await apiClient.VerifySolutionAsync("token", "solution", "127.0.0.1");
+            var status = await apiClient.VerifySolutionAsync("token", "solution", "127.0.0.1", TestContext.Current.CancellationToken);
 
             Assert.Equal(VerifyStatus.Success, status);
         }
